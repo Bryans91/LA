@@ -1,0 +1,6 @@
+c:\users\bryan\documents\visual studio 2013\Projects\LA week 5\LA week 5\bin\Debug\LA week 5.exe.config
+c:\users\bryan\documents\visual studio 2013\Projects\LA week 5\LA week 5\bin\Debug\LA week 5.exe
+c:\users\bryan\documents\visual studio 2013\Projects\LA week 5\LA week 5\bin\Debug\LA week 5.pdb
+c:\users\bryan\documents\visual studio 2013\Projects\LA week 5\LA week 5\obj\Debug\LA week 5.csprojResolveAssemblyReference.cache
+c:\users\bryan\documents\visual studio 2013\Projects\LA week 5\LA week 5\obj\Debug\LA week 5.exe
+c:\users\bryan\documents\visual studio 2013\Projects\LA week 5\LA week 5\obj\Debug\LA week 5.pdb
