@@ -5,6 +5,11 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LA week 5", "LA week 5\LA week 5.csproj", "{621F1C24-97EB-4CD5-B6EE-924A0B150DEB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6DD1C48F-59C9-4CF3-8A9D-F148AEA116E5}"
+	ProjectSection(SolutionItems) = preProject
+		LA week 5\Week2.cs = LA week 5\Week2.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
