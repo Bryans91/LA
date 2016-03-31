@@ -143,7 +143,80 @@ namespace week2 {
 
             return result;
         }
+
+
+        //Week 4
+        //opdracht 1a 
+        public Matrix RotatieOverX(double alpha)
+        {
+            Matrix rotatie = new Matrix(3, 3);
+
+            //toprow
+            rotatie.setValue(0, 0, 1);
+            rotatie.setValue(1, 0, 0);
+            rotatie.setValue(2, 0, 0);
+            //midrow
+            rotatie.setValue(0, 1, 0);
+            rotatie.setValue(1, 1, Math.Cos(alpha));
+            rotatie.setValue(2, 1, -Math.Sin(alpha));
+            //bottomrow
+            rotatie.setValue(0, 2, 0);
+            rotatie.setValue(1, 2, Math.Sin(alpha));
+            rotatie.setValue(2, 2, Math.Cos(alpha));
+
+            return rotatie;
+        }
+
+        public Matrix RotatieOverY(double alpha)
+        {
+            Matrix rotatie = new Matrix(3, 3);
+
+            //toprow
+            rotatie.setValue(0, 0, Math.Cos(alpha));
+            rotatie.setValue(1, 0, 0);
+            rotatie.setValue(2, 0, Math.Sin(alpha));
+            //midrow
+            rotatie.setValue(0, 1, 0);
+            rotatie.setValue(1, 1, 1);
+            rotatie.setValue(2, 1, 0);
+            //bottomrow
+            rotatie.setValue(0, 2, -Math.Sin(alpha));
+            rotatie.setValue(1, 2, 0);
+            rotatie.setValue(2, 2, Math.Cos(alpha));
+
+            return rotatie;
+        }
+
+        public Matrix RotatieOverZ(double alpha)
+        {
+            Matrix rotatie = new Matrix(3, 3);
+
+            //toprow
+            rotatie.setValue(0, 0, Math.Cos(alpha));
+            rotatie.setValue(1, 0, Math.Sin(alpha));
+            rotatie.setValue(2, 0, 0);
+            //midrow
+            rotatie.setValue(0, 1, Math.Sin(alpha));
+            rotatie.setValue(1, 1, Math.Cos(alpha));
+            rotatie.setValue(2, 1, 0);
+            //bottomrow
+            rotatie.setValue(0, 2, 0);
+            rotatie.setValue(1, 2, 0);
+            rotatie.setValue(2, 2, 1);
+
+            return rotatie;
+        }
+
+
+       //opdracht 1b
+        public Matrix rotatie(double alpha, double x, double y, double z)
+        {
+            //rip
+
+
+        }
      }
+
    }
 		
 
@@ -178,6 +251,9 @@ namespace week2{
 				throw new Exception("Out of Range: x = "+ x + " y = "+ y);
 			}
 		}
+
+
+    
 		
 		public void print(){
 			for(int y = 0; y < getySize(); y++){
@@ -194,6 +270,8 @@ namespace week2{
 		public int getySize() {
 			return ySize;
 		}
+
+
 	}
 }
 
