@@ -78,7 +78,7 @@ namespace LA_week_2
             matrix2.setValue(0, 1, 19);
             matrix2.setValue(0, 2, 23);
             Console.WriteLine("MATRIX 3 TEST");
-           // multiplyMatrices(matrix1, matrix2);
+            multiplyMatrices(matrix1, matrix2);
 
 
             //matrix 4 test
@@ -124,17 +124,17 @@ namespace LA_week_2
         //opgave 1 a
         public static Matrix multiplyMatrices(Matrix matrix1, Matrix matrix2)
         {
-            if (matrix1.getxSize() == matrix2.getySize())
+            if (matrix1.xSize == matrix2.ySize)
             {
-                Matrix result = new Matrix(matrix2.getxSize(), matrix1.getySize());
-                for (int x = 0; x < result.getxSize(); x++)
+                Matrix result = new Matrix(matrix2.xSize, matrix1.ySize);
+                for (int x = 0; x < result.xSize; x++)
                 {
-                    for (int y = 0; y < result.getySize(); y++)
+                    for (int y = 0; y < result.ySize; y++)
                     {
                         double endValue = 0;
                         //calculate endValue
                         int index = 0;
-                        while (index < matrix1.getxSize() && index < matrix2.getySize())
+                        while (index < matrix1.xSize && index < matrix2.ySize)
                         {
                             endValue += matrix1.getValue(index, y) * matrix2.getValue(x, index);
                             index++;
