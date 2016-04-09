@@ -8,66 +8,60 @@ namespace LA_week_3
 {
     class Matrix
     {
-        private double[,,] matrix;
-        private int xSize { get; set; }
-        private int ySize { get; set; }
-        private int zSize { get; set; }
+        private double[,] matrix;
+        public int xSize { get; set; }
+        public int ySize { get; set; }
+  
 
-        public Matrix(int xSize, int ySize,int zSize)
+        public Matrix(int xSize, int ySize)
         {
             this.xSize = xSize;
             this.ySize = ySize;
-            this.zSize = zSize;
-            matrix = new double[xSize,ySize,zSize];
+        
+            matrix = new double[xSize,ySize];
         }
 
-        public void setValue(int x, int y,int z, double value)
+        public void setValue(int x, int y, double value)
         {
             if (x < xSize && y < ySize)
             {
-                this.matrix[x,y,z] = value;
+                this.matrix[x,y] = value;
             }
             else
             {
-                throw new Exception("Out of Range: x = " + x + " y = " + y + " z = "  + z);
+                throw new Exception("Out of Range: x = " + x + " y = " + y);
             }
         }
 
-        public double getValue(int x, int y ,int z)
+        public double getValue(int x, int y )
         {
-            if (x < xSize && y < ySize && z < zSize)
+            if (x < xSize && y < ySize )
             {
-                return this.matrix[x,y,z];
+                return this.matrix[x,y];
             }
             else
             {
-                throw new Exception("Out of Range: x = " + x + " y = " + y + " z = " + z);
+                throw new Exception("Out of Range: x = " + x + " y = " + y);
             }
         }
 
 
         public void print()
-        {
-            for (int z = 0; z < this.zSize; z++)
+        {     
+            for (int y = 0; y < this.xSize; y++)
             {
-                Console.WriteLine("Z:" + z);
-                for (int y = 0; y < this.xSize; y++)
+                Console.Write("(");
+                for (int x = 0; x < this.xSize; x++)
                 {
-                    Console.Write("(");
-                    for (int x = 0; x < this.xSize; x++)
+                    Console.Write(this.matrix[x,y]);
+                    if (x + 1 != this.xSize)
                     {
-                        Console.Write(this.matrix[x, y, z]);
-                        if (x + 1 != this.xSize)
-                        {
-                            Console.Write(",");
-                        }
+                        Console.Write(",");
                     }
-                    Console.WriteLine(")");
                 }
+                Console.WriteLine(")");
             }
         }
-
-    
 
     }
 }
