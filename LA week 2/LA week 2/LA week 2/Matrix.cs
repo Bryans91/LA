@@ -9,8 +9,8 @@ namespace LA_week_2
     class Matrix
     {
         private double[,] matrix;
-        private int xSize;
-        private int ySize;
+        public int xSize { get; set; }
+        public int ySize { get; set; }
 
         public Matrix(int xSize, int ySize)
         {
@@ -33,7 +33,7 @@ namespace LA_week_2
 
         public double getValue(int x, int y)
         {
-            if (x < xSize && y < ySize)
+            if (x < this.xSize && y < this.ySize)
             {
                 return this.matrix[x,y];
             }
@@ -46,13 +46,13 @@ namespace LA_week_2
 
         public void print()
         {
-            for (int y = 0; y < getySize(); y++)
+            for (int y = 0; y < this.ySize; y++)
             {
                 Console.Write("(");
-                for (int x = 0; x < getxSize(); x++)
+                for (int x = 0; x < this.xSize; x++)
                 {
                     Console.Write(this.matrix[x,y]);
-                    if (x + 1 != getxSize())
+                    if (x + 1 != this.xSize)
                     {
                         Console.Write(",");
                     }
@@ -61,15 +61,7 @@ namespace LA_week_2
             }
         }
 
-        public int getxSize()
-        {
-            return xSize;
-        }
 
-        public int getySize()
-        {
-            return ySize;
-        }
 
     }
 }
