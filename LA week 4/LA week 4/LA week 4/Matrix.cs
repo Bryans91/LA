@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LA_week_3
+namespace LA_week_4
 {
     class Matrix
     {
