@@ -10,26 +10,30 @@ namespace LA_week_1
     {
         static void Main(string[] args)
         {
-            Vector a = new Vector(1, 3);
-            Vector b = new Vector(3, 7);
+            Vector a = new Vector(37, 41);
+            Vector b = new Vector(73, 14);
 
-           //Console.WriteLine(from1To2(a, b));
-            //from2To1(1, 2);
+         //   Console.WriteLine(from1To2(a, b));
+         //   Console.WriteLine("From 1 to 3");
+           //   from1To3(a, b);
 
-            //from1To3(a, b);
+
+          //  from2To1(-0.5, 0);
+          //  from2To3(-0,5, 0);
 
 
             //result of 1 to 3
-            Vector aa = new Vector(1, 3);
-            Vector bb = new Vector(1, 2);
-
-           // from3To1(aa, bb);
+            Vector aa = new Vector(12, 0);
+            Vector bb = new Vector(-3, 0);
 
 
-            from2To3(1,2);
-
-
+            Console.WriteLine("From 3 to 1");
+            from3To1(aa, bb);
             Console.WriteLine(from3To2(aa, bb));
+           
+
+
+      
 
 
             Console.ReadKey();
@@ -80,8 +84,10 @@ namespace LA_week_1
         {
             Vector p = new Vector(va.x, va.y);
             Vector q = new Vector(va.x + vb.x, va.y + vb.y);
-
+            Console.WriteLine("P:");
             p.printVector();
+            Console.WriteLine("Q:");
+
             q.printVector();
         }
 
@@ -107,6 +113,7 @@ namespace LA_week_1
                 return ("Conversie niet mogelijk");
             }
         }
-
+
+
     }
 }
