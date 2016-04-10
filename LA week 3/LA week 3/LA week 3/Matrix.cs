@@ -48,7 +48,7 @@ namespace LA_week_3
 
         public void print()
         {     
-            for (int y = 0; y < this.xSize; y++)
+            for (int y = 0; y < this.ySize; y++)
             {
                 Console.Write("(");
                 for (int x = 0; x < this.xSize; x++)
