@@ -155,13 +155,22 @@ namespace LA_week_6
                     identity.setValue(i, position, getValue(i, position) / value);
                 }
             }
-            else
+            else if (value < 0)
             {
+                Console.WriteLine("NOPE: "+ value);
+                value = 1 / value;
+                Console.WriteLine("SOMETHING ELSE: " + value);
                 for (int i = 0; i < xSize; i++)
                 {
-                    Console.WriteLine();
-                    Console.WriteLine("This is my exit..");
+                    Console.WriteLine("SOMETHING: " + getValue(i, position) * value);
+                    this.setValue(i, position, getValue(i, position) * value);
+                    identity.setValue(i, position, getValue(i, position) * value);
                 }
+            }
+            else
+            {
+                Console.WriteLine();
+                Console.WriteLine("Kan niet verder.. (waarde is 0)");
             }
         }
 
